@@ -2,6 +2,7 @@
 const express = require ('express');
 const port = 3000;
 
+const skillsRouter = require('./routes/skills');
 // create the express app
 const app = express ();
 
@@ -9,8 +10,13 @@ const app = express ();
 app.set ('view engine','ejs');
 // mount our routes
 
-// tell the app to listen
+app.get('/', function(req,res){
+    res.render('index');
+});
+// all routers pertaining to//
+app.use('/skills',skillsRouter);
 
+//tell the app to listen//
 app.listen(port, function() {
     console.log('Express is listening on port:${port}');
 });
