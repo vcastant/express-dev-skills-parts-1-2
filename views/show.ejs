@@ -1,0 +1,22 @@
+lines (18 sloc)  530 Bytes
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Details</title>
+</head>
+<body>
+  <h1>My Skill</h1>
+  <p>end: <%= skill.end %></p>
+  <p>skill: <%= skill.skill %></p>
+  <a href='/<%= skill.skill %>/edit'>Edit skill</a>
+  <form action='/<%= skill.skill %>?_method=DELETE' method='POST'>
+    <button type='submit'>Delete</button>  
+  </forf>  
+ 
+  <a href="/skills">Back to All Skills</a></br>
+  <a href="/">Back to Home Page</a>
+</body>
+</html>
